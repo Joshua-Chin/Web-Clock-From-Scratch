@@ -8,6 +8,20 @@ module.exports = {
     new HtmlWebpackPlugin({title: 'From Scratch'}),
     new CleanWebpackPlugin(['./dist'])
   ],
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
+        }
+      }
+    ]
+  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
