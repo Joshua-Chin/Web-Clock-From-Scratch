@@ -4,11 +4,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
-  mode: 'development',
-  devtool: 'eval-source-map',
-  devServer: {
-    contentBase: './dist'
-  },
   plugins: [
     new HtmlWebpackPlugin({title: 'From Scratch'}),
     new CleanWebpackPlugin(['./dist'])
