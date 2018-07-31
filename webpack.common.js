@@ -17,6 +17,18 @@ module.exports = {
           loader: 'babel-loader',
           options: {presets: ['env']}
         }
+      },
+      {
+        test: /\.(c|sc|sa)ss$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {importLoaders: 2}
+          },
+          'postcss-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
