@@ -24,10 +24,9 @@ module.exports = {
           'style-loader',
           {
             loader: 'css-loader',
-            options: {importLoaders: 2}
+            options: {importLoaders: 1}
           },
-          'postcss-loader',
-          'sass-loader'
+          'postcss-loader'
         ]
       }
     ]
