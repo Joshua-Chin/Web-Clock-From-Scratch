@@ -2,6 +2,9 @@
     "env": {
         "production": {"presets": ["env"]},
         "development": {"presets": ["env"]},
-        "test": {"presets": ["env", {"modules": false}]}
+        "test": {
+            "presets": [["env", {"modules": false}]],
+            "plugins": ["transform-es2015-modules-commonjs"]
+        }
     }
 }
