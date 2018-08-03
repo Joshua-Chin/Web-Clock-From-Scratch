@@ -5,7 +5,8 @@
                 ["env", {
                     "targets": {
                         "browsers": [">2%", "not ie 11", "not op_mini all"]
-                    }
+                    },
+                    "modules": false
                 }
             ]]
         },
@@ -14,15 +15,15 @@
                 ["env", {
                     "targets": {
                         "browsers": [">2%", "not ie 11", "not op_mini all"]
-                    }
+                    },
+                    "modules": false
                 }
             ]]
         },
         "test": {
             "presets": [
                 ["env", {
-                    "targets": {"node": "current"},
-                    "modules": false
+                    "targets": {"node": "current"}
                 }],
                 "jest"
             ],
