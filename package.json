@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "(cd client && npm install); (cd server && npm install)",
     "test": "(cd client && npm test); (cd server && npm test)",
-    "start": "concurrently -k \"cd client && npm start\" \"cd server && npm start\""
+    "start": "concurrently --kill-others-on-fail \"cd client && npm start\" \"cd server && npm start\""
   },
   "repository": {
     "type": "git",
