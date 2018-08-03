@@ -1,10 +1,14 @@
 import './index.css';
 import message from './message';
 
-const component = () => {
+async function component() {
   const element = document.createElement('p');
-  element.innerHTML = message();
+  element.innerHTML = await message();
   return element;
-};
+}
 
-document.body.appendChild(component());
+async function main() {
+  document.body.appendChild(await component());
+}
+
+main();

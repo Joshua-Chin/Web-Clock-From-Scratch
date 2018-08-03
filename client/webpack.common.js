@@ -29,10 +29,11 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          options: {babelrc: './.babelrc'}
         }
       },
       {
-        test: /\.(c|sc|sa)ss$/,
+        test: /\.css$/,
         use: [
           'style-loader',
           {

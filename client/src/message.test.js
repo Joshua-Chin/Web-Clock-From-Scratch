@@ -1,5 +1,10 @@
 import message from './message';
 
-test('message', () => {
-  expect(message()).toMatch('Hello! The current time is');
+global.fetch = jest.fn()
+  .mockImplementation(
+    () => Promise.resolve({json: () => "today"})
+  );
+
+test('message', async () => {
+  expect(await message()).toMatch('Hello! The current time is');
 });

@@ -1,9 +1,25 @@
 {
     "env": {
-        "production": {"presets": ["env"]},
-        "development": {"presets": ["env"]},
+        "production": {
+            "presets": [[
+                "env", {
+                    "targets": {
+                        "browsers": [">2%", "not ie 11", "not op_mini all"]
+                    }
+                }
+            ]]
+        },
+        "development": {
+            "presets": [[
+                "env", {
+                    "targets": {
+                        "browsers": [">2%", "not ie 11", "not op_mini all"]
+                    }
+                }
+            ]]
+        },
         "test": {
-            "presets": [["env", {"modules": false}]],
+            "presets": [["env", {"modules": false}], "jest"],
             "plugins": ["transform-es2015-modules-commonjs"]
         }
     }
