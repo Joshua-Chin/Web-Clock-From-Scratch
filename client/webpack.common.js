@@ -31,17 +31,6 @@ module.exports = {
           loader: 'babel-loader',
           options: {babelrc: './.babelrc'}
         }
-      },
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {importLoaders: 1}
-          },
-          'postcss-loader'
-        ]
       }
     ]
   },
